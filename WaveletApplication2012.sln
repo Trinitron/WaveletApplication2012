@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletApplication", "WaveletApplication\WaveletApplication.csproj", "{ED73FD81-B82D-45F5-A578-76D1FC81A395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningWavelet", "RunningWavelet\RunningWavelet.csproj", "{E9CE7492-EE64-4BBE-98F7-C99658457252}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs35
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RunningWavelet\\RunningWavelet.csproj
+		SccProjectName1 = RunningWavelet
+		SccLocalPath1 = RunningWavelet
+		SccProjectUniqueName2 = WaveletApplication\\WaveletApplication.csproj
+		SccProjectName2 = WaveletApplication
+		SccLocalPath2 = WaveletApplication
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED73FD81-B82D-45F5-A578-76D1FC81A395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED73FD81-B82D-45F5-A578-76D1FC81A395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED73FD81-B82D-45F5-A578-76D1FC81A395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED73FD81-B82D-45F5-A578-76D1FC81A395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CE7492-EE64-4BBE-98F7-C99658457252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CE7492-EE64-4BBE-98F7-C99658457252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CE7492-EE64-4BBE-98F7-C99658457252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CE7492-EE64-4BBE-98F7-C99658457252}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

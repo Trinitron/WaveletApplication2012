@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WaveletSettings>
+  <WaveletName>Добеши 2</WaveletName>
+  <WaveletDescription>4 коэффициентов (ортоганальный)</WaveletDescription>
+  <H0>
+    <double>-0.12940952255126</double>
+    <double>0.224143868042013</double>
+    <double>0.836516303737808</double>
+    <double>0.482962913144534</double>
+  </H0>
+  <H1>
+    <double>-0.482962913144534</double>
+    <double>0.836516303737808</double>
+    <double>-0.224143868042013</double>
+    <double>-0.12940952255126</double>
+  </H1>
+  <F0>
+    <double>0.482962913144534</double>
+    <double>0.836516303737808</double>
+    <double>0.224143868042013</double>
+    <double>-0.12940952255126</double>
+  </F0>
+  <F1>
+    <double>-0.12940952255126</double>
+    <double>-0.224143868042013</double>
+    <double>0.836516303737808</double>
+    <double>-0.482962913144534</double>
+  </F1>
+</WaveletSettings>

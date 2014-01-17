@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WaveletSettings>
+  <WaveletName>Добеши 6</WaveletName>
+  <WaveletDescription>12 коэффициентов (ортоганальный)</WaveletDescription>
+  <H0>
+    <double>-0.00107730108530848</double>
+    <double>0.00477725751094552</double>
+    <double>0.000553842201161487</double>
+    <double>-0.0315820393174861</double>
+    <double>0.0275228655303058</double>
+    <double>0.0975016055873234</double>
+    <double>-0.129766867567262</double>
+    <double>-0.22626469396544</double>
+    <double>0.315250351709197</double>
+    <double>0.751133908021095</double>
+    <double>0.494623890398453</double>
+    <double>0.11154074335011</double>
+  </H0>
+  <H1>
+    <double>-0.11154074335011</double>
+    <double>0.494623890398453</double>
+    <double>-0.751133908021095</double>
+    <double>0.315250351709197</double>
+    <double>0.22626469396544</double>
+    <double>-0.129766867567262</double>
+    <double>-0.0975016055873234</double>
+    <double>0.0275228655303058</double>
+    <double>0.0315820393174861</double>
+    <double>0.000553842201161487</double>
+    <double>-0.00477725751094552</double>
+    <double>-0.00107730108530848</double>
+  </H1>
+  <F0>
+    <double>0.11154074335011</double>
+    <double>0.494623890398453</double>
+    <double>0.751133908021095</double>
+    <double>0.315250351709197</double>
+    <double>-0.22626469396544</double>
+    <double>-0.129766867567262</double>
+   <double> 0.0975016055873234</double>
+    <double>0.0275228655303058</double>
+    <double>-0.0315820393174861</double>
+    <double>0.000553842201161487</double>
+    <double>0.00477725751094552</double>
+    <double>-0.00107730108530848</double>
+  </F0>
+  <F1>
+    <double>-0.00107730108530848</double>
+    <double>-0.00477725751094552</double>
+    <double>0.000553842201161487</double>
+    <double>0.0315820393174861</double>
+    <double>0.0275228655303058</double>
+    <double>-0.0975016055873234</double>
+    <double>-0.129766867567262</double>
+    <double>0.22626469396544</double>
+    <double>0.315250351709197</double>
+    <double>-0.751133908021095</double>
+    <double>0.494623890398453</double>
+    <double>-0.11154074335011</double>
+  </F1>
+</WaveletSettings>

@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9CE7492-EE64-4BBE-98F7-C99658457252}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RunningWavelet</RootNamespace>
+    <AssemblyName>RunningWavelet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <StartupObject>RunningWavelet.Program</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataGenerators\TestSequence.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="SignalBuffer.cs" />
+    <Compile Include="DataGenerators\IGenerable.cs" />
+    <Compile Include="DataGenerators\SinGenerator.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSettingsPannel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSettingsPannel.Designer.cs">
+      <DependentUpon>ucSettingsPannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaveletController\IRunningWaveletView.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunningProcessor.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucSettingsPannel.resx">
+      <DependentUpon>ucSettingsPannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WaveletController\RunningWaveletController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaveletApplication\WaveletApplication.csproj">
+      <Project>{ED73FD81-B82D-45F5-A578-76D1FC81A395}</Project>
+      <Name>WaveletApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomout.png" />
+    <None Include="Resources\zoomin.png" />
+    <None Include="Resources\work.png" />
+    <None Include="Resources\womanman.png" />
+    <None Include="Resources\woman.png" />
+    <None Include="Resources\window.png" />
+    <None Include="Resources\wifi.png" />
+    <None Include="Resources\volume_low.png" />
+    <None Include="Resources\volume_high.png" />
+    <None Include="Resources\volume.png" />
+    <None Include="Resources\video.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\type.png" />
+    <None Include="Resources\tv.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\trackback.png" />
+    <None Include="Resources\tools.png" />
+    <None Include="Resources\tongue.png" />
+    <None Include="Resources\toggle.png" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\tcp.png" />
+    <None Include="Resources\target.png" />
+    <None Include="Resources\switch.png" />
+    <None Include="Resources\subtract.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\smirk.png" />
+    <None Include="Resources\smile.png" />
+    <None Include="Resources\seconds.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\scream.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\sad.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\quicktime.png" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\play1.png" />
+    <None Include="Resources\phone1.png" />
+    <None Include="Resources\pause1.png" />
+    <None Include="Resources\open.png" />
+    <None Include="Resources\night.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\newwindow.png" />
+    <None Include="Resources\mute_centered.png" />
+    <None Include="Resources\mute.png" />
+    <None Include="Resources\music.png" />
+    <None Include="Resources\manman.png" />
+    <None Include="Resources\man.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\loop.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\last.png" />
+    <None Include="Resources\ipod.png" />
+    <None Include="Resources\html.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\graph.png" />
+    <None Include="Resources\ftp.png" />
+    <None Include="Resources\frown.png" />
+    <None Include="Resources\forward.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\flash.png" />
+    <None Include="Resources\flag.png" />
+    <None Include="Resources\first.png" />
+    <None Include="Resources\equalizer.png" />
+    <None Include="Resources\eject.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\denied.png" />
+    <None Include="Resources\day.png" />
+    <None Include="Resources\cube.png" />
+    <None Include="Resources\comment.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\cellphone.png" />
+    <None Include="Resources\cd.png" />
+    <None Include="Resources\cart.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\calday.png" />
+    <None Include="Resources\buy.png" />
+    <None Include="Resources\bstop.png" />
+    <None Include="Resources\blah.png" />
+    <None Include="Resources\binary.png" />
+    <None Include="Resources\bigsmile.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\ascii.png" />
+    <None Include="Resources\arrow3_w.png" />
+    <None Include="Resources\arrow3_sw.png" />
+    <None Include="Resources\arrow3_se.png" />
+    <None Include="Resources\arrow3_s.png" />
+    <None Include="Resources\arrow3_nw.png" />
+    <None Include="Resources\arrow3_ne.png" />
+    <None Include="Resources\arrow3_n.png" />
+    <None Include="Resources\arrow3_e.png" />
+    <None Include="Resources\arrow2_w.png" />
+    <None Include="Resources\arrow2_sw.png" />
+    <None Include="Resources\arrow2_se.png" />
+    <None Include="Resources\arrow2_s.png" />
+    <None Include="Resources\arrow2_nw.png" />
+    <None Include="Resources\arrow2_ne.png" />
+    <None Include="Resources\arrow2_n.png" />
+    <None Include="Resources\arrow2_e.png" />
+    <None Include="Resources\arrow1_w.png" />
+    <None Include="Resources\arrow1_sw.png" />
+    <None Include="Resources\arrow1_se.png" />
+    <None Include="Resources\arrow1_s.png" />
+    <None Include="Resources\arrow1_nw.png" />
+    <None Include="Resources\arrow1_ne.png" />
+    <None Include="Resources\arrow1_n.png" />
+    <None Include="Resources\arrow1_e.png" />
+    <None Include="Resources\apple.png" />
+    <None Include="Resources\alert.png" />
+    <None Include="Resources\addressbook.png" />
+    <None Include="Resources\add.png" />
+    <Content Include="Resources\pause.png" />
+    <Content Include="Resources\phone.png" />
+    <Content Include="Resources\play.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
